@@ -35,3 +35,10 @@ void displayBoard() {
         }
     }
 }
+
+
+
+// Function to switch players
+char switchPlayer(char currentPlayer) {
+    return (currentPlayer == 'X') ? 'O' : 'X';
+}
