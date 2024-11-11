@@ -35,3 +35,28 @@ void displayBoard() {
         }
     }
 }
+
+ // Main game loop
+ void playGame() {
+    while (true) {
+        displayBoard();
+        int row, col;
+        cout << "Player " << currentPlayer << ", enter row (0-2): ";
+        cin >> row;
+        cout << "Player " << currentPlayer << ", enter column (0-2): ";
+        cin >> col;
+
+        if (board[row][col] == ' ') {
+            board[row][col] = currentPlayer;
+            if (checkWin(currentPlayer)) {
+                displayBoard();
+                cout << "Player " << currentPlayer << " wins!" << endl;
+                break;
+            }
+            currentPlayer = switchPlayer(currentPlayer);
+        } else {
+            cout << "That position is already taken. Try again." << endl;
+        }
+    }
+}
+
