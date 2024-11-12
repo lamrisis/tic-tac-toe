@@ -11,6 +11,7 @@ void initBoard() {
             board[i][j] = ' ';
         }
     }
+    
 }
 
 int main() {
