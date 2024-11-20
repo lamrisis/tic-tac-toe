@@ -55,7 +55,7 @@ bool checkWin(char player) {
 // Function to switch players
 
 char switchPlayer(char currentPlayer){
-    return (currentPlayer == 'X')?'O':'X';
+    return (currentPlayer == 'X')?'O':'X';//ternary operator if current player is 'x',it returns'o' ,otherwise it retuns 'x'.
 }
 
  // Main game loop
@@ -86,6 +86,6 @@ char switchPlayer(char currentPlayer){
 
 int main() {
     initBoard(); // Initialize the game board1
-    playGame();
-    return 0;
+    playGame();//starts the game 
+    return 0;//indicates successful excution
 }
